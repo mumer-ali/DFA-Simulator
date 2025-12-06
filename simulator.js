@@ -22,7 +22,7 @@ let states = [
 
 $(document).ready(function () {
   console_msg(
-    "Press Add state button to Add a new node in the diagram and drag the node to custom positions"
+    "Press add state button to add a new state"
   );
   $("#q0").draggable({ containment: ".draw-area" });
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
   // Add Node on button click
   $("#add-state").click(function () {
     console_msg(
-      "Inputs and transitions can be defined through state transition button"
+      "Press add transition button to add a new transition"
     );
     // Generate a node Id
     const nodeId = getNodeId();
@@ -72,7 +72,7 @@ $(document).ready(function () {
     if (finalStatePresent) $("#test-form").modal("show");
     else
       console_msg(
-        "No Final State Specified in the Diagram. Select a state and press Make Final State",
+        "Select a state and press make final state to test",
         2
       );
   });
@@ -156,7 +156,7 @@ $(document).ready(function () {
     if (!fromStatePresent)
       document.getElementById(
         "frm-validate"
-      ).textContent = `State ${from} is not present in diagram. Enter a valid state name`;
+      ).textContent = `State ${from} is not present in diagram`;
 
     if (inputPresent)
       document.getElementById(
@@ -165,12 +165,12 @@ $(document).ready(function () {
     if (input == "")
       document.getElementById(
         "input-validate"
-      ).textContent = `Input cannot be empty filed`;
+      ).textContent = `Input cannot be empty`;
 
     if (!toStatePresent)
       document.getElementById(
         "to-validate"
-      ).textContent = `State ${to} is not present in diagram. Enter a valid state name`;
+      ).textContent = `State ${to} is not present in diagram`;
 
     if (fromStatePresent && toStatePresent && !inputPresent && input != "")
       return true;
@@ -253,11 +253,11 @@ $(document).ready(function () {
     // Path specifies the order in which the inputs move through state
     let path = [];
     if (states.length == 0) {
-      console_msg("Draw A diagram to run simulator..", 1);
+      console_msg("Draw a diagram to run", 1);
       return;
     }
 
-    console_msg("Test Running. . .", 2);
+    console_msg("Running", 2);
     document.getElementById("test-string-disp").textContent = inputStr;
     // Pointer startes at node zero
     let statePtr = states[0].id;
@@ -280,7 +280,7 @@ $(document).ready(function () {
       // Check if state responds to an input or not
       if (nextStateIndex == null) {
         console.log(
-          `Terminated termnated at state ${currentState} for input ${input}`
+          `Terminated at state ${currentState} for input ${input}`
         );
         break;
       }
@@ -295,14 +295,14 @@ $(document).ready(function () {
     console.log("current state: ");
     console.log(currentState);
     if (currentState.final) {
-      console.log("Test Passed ....");
+      console.log("Passed");
       console_msg(
-        `Input String <span style="color: green"> ACCEPTED </span>, input ended at state q${currentState.id}`,
+        `Input String <span style="color: green"> ACCEPTED </span>`,
         1
       );
     } else {
       console_msg(
-        'Input string <span style="color: red">REJECTED</span> by DFA.',
+        'Input string <span style="color: red">REJECTED</span>',
         1
       );
     }

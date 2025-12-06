@@ -3,14 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>DFA Simulator</title>
-
-    <!-- Stylesheet and Bootstrap -->
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
-
-    <!-- Jquery-->
     <link rel="stylesheet" href="./jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css" />
     <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css" />
@@ -32,7 +27,6 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-10">
-          <!--Control pannel -->
           <div class="btn-container container">
             <input
               type="button"
@@ -65,20 +59,14 @@
               value="Test String"
             />
           </div>
-
-          <!--Console -->
-          <!-- <div class="console container">
-            <p>Console: <span id="msg"></span></p>
-          </div> -->
-
-          <!-- Drawing Area -->
+          <div class="console container">
+            <p><span id="msg"></span></p>
+          </div>
           <div class="draw-area container">
             <div id="q0" class="node">
               <p>Q0</p>
               <p id="q0-input-details" class="input-details"></p>
             </div>
-
-            <!-- Modal for state connection -->
             <div
               class="modal fade"
               id="connect-form"
@@ -87,7 +75,6 @@
               aria-labelledby="State Transition"
               aria-hidden="true"
             >
-              <!--State Input detail form will append here -->
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -162,8 +149,6 @@
                 </div>
               </div>
             </div>
-
-            <!--Modal for Simulate-->
             <div
               class="modal fade"
               id="test-form"
@@ -217,14 +202,10 @@
               </div>
             </div>
           </div>
-
-          <!-- Input string Display-->
           <div class="input-info container">
             <p id="test-string-disp">String Test Info</p>
           </div>
         </div>
-
-        <!-- Rules container -->
         <div id="rule-box" class="col-xl-2">
           <h3 id="rule-header">DFA Rules</h3>
           <ul class="list-group dfa-rules">
