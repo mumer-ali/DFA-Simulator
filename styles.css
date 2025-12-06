@@ -1,0 +1,120 @@
+.hd {
+  font-family: monospace;
+  text-align: center;
+  font-size: small;
+  font-style: oblique;
+}
+
+.hd1 {
+  text-align: center;
+  color: #637dc7;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.draw-area {
+  background-color: aliceblue;
+  height: 600px;
+  width: 600px;
+  position: relative;
+  border: rgb(38, 38, 107) 5px solid;
+}
+
+.node {
+  border: #1f3c7d 2px solid;
+  text-align: center;
+  border-radius: 40%;
+  background-color: #577ee8;
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.node p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.console {
+  height: 35px;
+  border: #1f3c7d 2px solid;
+  margin-bottom: 0;
+  margin-top: 1px;
+  background-color: rgb(206, 206, 238);
+}
+
+.console p {
+  color: rgb(38, 38, 107);
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.btn-container {
+  position: relative;
+  align-items: center;
+}
+
+#msg {
+  color: rgb(47, 155, 119);
+}
+
+#connected {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+.input-details {
+  font-size: 12px;
+}
+
+#q0 {
+  position: absolute;
+  top: 35%;
+  float: left;
+}
+
+.input-info {
+  background-color: rgb(206, 206, 238);
+  border: #1f3c7d 2px solid;
+  height: 25px;
+  text-align: center;
+  color: #1f3c7d;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: large;
+}
+
+.validators {
+  font-size: 14px;
+  color: crimson;
+}
+
+#rule-box {
+  margin-right: auto;
+  width: max-content;
+  background-color: rgb(206, 206, 238);
+  border: #1f3c7d 3px solid;
+}
+
+#rule-box h3 {
+  text-align: center;
+  color: #637dc7;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+#rule-box li {
+  background-color: rgb(217, 217, 228);
+  text-align: center;
+  color: #1f3c7d;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: large;
+}
