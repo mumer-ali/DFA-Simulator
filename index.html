@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>DFA Simulator: Build and Test custom Machines</title>
+    <title>DFA Simulator</title>
 
     <!-- Stylesheet and Bootstrap -->
     <link rel="stylesheet" href="./styles.css" />
@@ -22,9 +22,9 @@
       style="background-color: aliceblue; padding: 4px; margin-top: 3px;"
     >
       <div class="hd container">
-        <h1 class="hd1 display-6">DFA - Simulator</h1>
+        <h1 class="hd1 display-6">DFA Simulator</h1>
         <p class="lead">
-          Deterministic Finite Machine tester and simulator. Create and Test DFA
+          Deterministic Finite Automaton simulator and tester
         </p>
       </div>
     </div>
@@ -67,9 +67,9 @@
           </div>
 
           <!--Console -->
-          <div class="console container">
+          <!-- <div class="console container">
             <p>Console: <span id="msg"></span></p>
-          </div>
+          </div> -->
 
           <!-- Drawing Area -->
           <div class="draw-area container">
@@ -225,49 +225,40 @@
         </div>
 
         <!-- Rules container -->
-        <div id="rule-box" class="col-xl-2" style="padding: 4px;">
+        <div id="rule-box" class="col-xl-2">
           <h3 id="rule-header">DFA Rules</h3>
-          <ul class="list-group">
+          <ul class="list-group dfa-rules">
             <li class="list-group-item">
-              DFA refers to deterministic finite automata. Deterministic refers
-              to the uniqueness of the computation. The finite automata are
-              called deterministic finite automata if the machine is read an
-              input string one symbol at a time.
+              DFA reads one input string symbol at a time.
             </li>
             <li class="list-group-item">
-              In DFA, there is only one path for specific input from the current
-              state to the next state.
+              There is only one path for an input from to the next state.
             </li>
             <li class="list-group-item">
-              DFA does not accept the null move, i.e., the DFA cannot change
-              state without any input character.
+              DFA does not accept the null move.
             </li>
-
             <li class="list-group-item">
-              DFA can contain multiple final states.
+              DFA can contain multiple accepting states.
+            </li>
+            <li class="list-group-item">
+              Every state has a transition defined for each symbol.
+            </li>
+            <li class="list-group-item">
+              The number of states in a DFA is finite.
+            </li>
+            <li class="list-group-item">
+              DFA can recognize only regular languages.
             </li>
           </ul>
         </div>
-        <!-- Rules container Ends-->
       </div>
     </div>
-    <!-- Scripts-->
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="jquery.connections.js"></script>
     <script src="./divVars.js"></script>
     <script src="./simulator.js"></script>
-
     <script src="./jquery-ui/jquery-ui.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-
     <hr />
-
-    <!-- Footer
-    <footer class="page-footer font-small blue pt-4">
-      <div class="footer-copyright text-center py-3">
-        © 2020 Copyright:
-        <a href="http://bing101.github.io"> Bing</a>
-      </div>
-    </footer> -->
   </body>
 </html>
